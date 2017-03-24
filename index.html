@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <title>Hello World!</title>
+   </head>
+   <body>
+      <h1>Hello World!</h1>
+      We are using node <script>document.write(process.versions.node)</script>,
+      Chrome <script>document.write(process.versions.chrome)</script>,
+      and Electron <script>document.write(process.versions.electron)</script>.
+
+And this one:
+<input type="text" id="principal" value="200000"/>
+<input type="text" id="years" value="30"/>
+<input type="text" id="rate" value="5.0"/>
+
+
+
+<button onclick="clickme();">click me</button>
+<script>
+  function clickme(){
+  var principal = document.getElementById("principal").value;
+  var years = document.getElementById("years").value;
+  var rate = document.getElementById("rate").value;
+  var monthlyPayment = calculateMonthlyPayment(principal,years,rate);
+  document.getElementById("monthlyPayment").innerHTML = monthlyPayment.toFixed(2);
+};
+</script>
+
+
+</div>
+<h2>Monthly Payment: <span id="monthlyPayment" class="currency"></span></h2>
+
+<script src="main.js"></script>
+   </body>
+</html>
